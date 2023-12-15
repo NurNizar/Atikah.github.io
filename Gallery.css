@@ -1,0 +1,172 @@
+body {
+    font-family: 'Josefin sans', sans-serif;
+    background-color: black;
+    transition: background-color 1s ease;
+}
+
+body, h1 {
+    color: white;
+    font-size: 60px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+header, section, footer {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+body:hover {
+    background-color: black;
+}
+
+body:hover header, body:hover section, body:hover footer {
+    opacity: 1;
+}
+
+.image-gallery {
+    margin-top: 20px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* My Gallery Section Styles */
+.my-gallery .gallery-item {
+    position: relative;
+    margin: 10px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    cursor: pointer;
+    width: calc(25% - 20px);
+    height: 500px;
+}
+
+.my-gallery .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.my-gallery .image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+}
+
+.my-gallery .gallery-item:hover .image-overlay {
+    opacity: 1;
+}
+
+.my-gallery .overlay-text {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.my-gallery .gallery-item:hover .overlay-text {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Family Gallery Section Styles */
+.family-gallery .gallery-item-family {
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+    width: calc(33.33% - 20px);
+    margin-bottom: 5px;
+    flex-grow: 1;
+}
+
+.family-gallery .gallery-item-family img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.family-gallery .family-image-overlay {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.family-gallery .overlay-text {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.family-gallery .gallery-item-family:hover .family-image-overlay {
+    opacity: 1;
+}
+
+.family-gallery .gallery-item-family:hover .overlay-text {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+/* Generic Gallery Styles */
+.gallery-item {
+    position: relative;
+    margin: 10px;
+    margin-bottom: 0px;
+    overflow: hidden;
+    cursor: pointer;
+    width: calc(25% - 20px);
+    height: 500px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.generic-image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+}
+
+.gallery-item:hover .generic-image-overlay {
+    opacity: 1;
+}
+
+.overlay-text {
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+}
